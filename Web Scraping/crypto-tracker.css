@@ -1,0 +1,205 @@
+:root {
+  --text-color: #f0f0f0;
+  --hover-color: #ffcc66;
+  --bg-color: #222222;
+  --secon-bg-color: #1a1a1a;
+  --big-font: 2rem;
+  --normal-font: 1.6rem;
+  --neon-box-shadow: 0 0 0.5rem #ffcc66;
+  --h2-font: 2.5rem;
+  --soft-neon-text-shadow: 0 0 5px rgba(255, 204, 102, 0.2),
+    0 0 10px rgba(255, 204, 102, 0.2), 0 0 15px rgba(255, 204, 102, 0.2),
+    0 0 20px rgba(255, 204, 102, 0.2), 0 0 25px rgba(255, 204, 102, 0.2);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--normal-font);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--secon-bg-color);
+  color: var(--hover-color);
+  padding: 1rem;
+  text-align: center;
+  text-shadow: var(--soft-neon-text-shadow);
+  font-size: var(--big-font);
+}
+
+main {
+  margin: 2em;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.project-image,
+.project-details {
+  flex: 1 1 45%;
+  max-width: 45%;
+}
+
+.project-details p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--neon-box-shadow);
+}
+
+.crypto-quote {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: rgb(161, 161, 161);
+  text-align: center;
+  font-style: italic;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.project-details h2 {
+  font-size: var(--h2-font);
+  color: var(--hover-color);
+  text-shadow: var(--soft-neon-text-shadow);
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.project-details p,
+.project-details ul {
+  margin-bottom: 1.5em;
+}
+
+.project-details ul {
+  list-style-type: disc;
+  padding-left: 1em;
+}
+
+.project-details ul li {
+  margin-bottom: 0.5em;
+}
+
+.buttons {
+  margin-top: 2em;
+}
+
+.buttons button {
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  background-color: var(--secon-bg-color);
+  color: var(--hover-color);
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: var(--neon-box-shadow);
+  text-transform: uppercase;
+}
+
+.buttons button:last-child {
+  margin-right: 0;
+}
+
+.buttons button:hover {
+  background-color: var(--hover-color);
+  color: var(--secon-bg-color);
+  box-shadow: 0 0 1rem var(--hover-color);
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styling */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-image,
+  .project-details {
+    max-width: 100%;
+  }
+
+  .project-image img {
+    width: 100%;
+    align-items: center;
+  }
+
+  .crypto-quote {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  header {
+    font-size: 1.6rem;
+  }
+
+  .project-details h2 {
+    font-size: 1.8rem;
+  }
+
+  .project-image img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    align-items: center;
+  }
+
+  .crypto-quote {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  header {
+    font-size: 1.4rem;
+  }
+
+  .project-details h2 {
+    font-size: 1.6rem;
+  }
+
+  .project-image img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .buttons button {
+    padding: 0.4em 0.8em;
+  }
+
+  .crypto-quote {
+    font-size: 0.9rem;
+  }
+}
