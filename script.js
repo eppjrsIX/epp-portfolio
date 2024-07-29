@@ -239,6 +239,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
+// New Feature - JS Obfuscated Code
 document.addEventListener("contextmenu", (event) => event.preventDefault());
 document.addEventListener("keydown", (event) => {
   if (
